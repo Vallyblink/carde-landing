@@ -1,16 +1,14 @@
+import MainSectionSlider from "./sections/MainSection/mainSection"
+import data from "../data/mainSlider.json"
+import Header from "./header/header";
+import ContentSection from "./sections/InfoSection/infoSection";
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+    <Header/>
+      <MainSectionSlider sliders={data} />
+      <ContentSection/>
     </div>
   );
 };

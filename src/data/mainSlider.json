@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743009/m9uferht8ozkpoqz3pov.webp",
+    "text": "Bla bla bla bla bla? Some information on this slider to see",
+    "buttonText": "some button",
+    "buttonLink": "sectionID"
+  },
+  {
+    "id": 2,
+    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743008/sabtsloqwyyanaq4jshn.jpg",
+    "text": "Другий слайд",
+    "buttonText": "Відкрити",
+    "buttonLink": "sectionID"
+  },
+  {
+    "id": 3,
+    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743007/k6qs6s9nheblirzzubx3.webp",
+    "text": "Третій слайд",
+    "buttonText": "Придбати зараз",
+    "buttonLink": "sectionID"
+  },
+  {
+    "id": 4,
+    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743007/tp6opdtclrwfejbgbd56.jpg",
+    "text": "Четвертий слайд",
+    "buttonText": "Придбати зараз",
+    "buttonLink": "sectionID"
+  }
+]
