@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import MenuIcon from '@mui/icons-material/Menu';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Link } from 'react-router-dom'; 
 
@@ -27,24 +28,20 @@ export const MainButton = ({ title, onClick }) => {
           alignItems: 'center',
           textTransform: 'uppercase',
           borderRadius: '20px',
-          marginTop: '10px',
-          marginBottom: '10px',
-          letterSpacing: '-0.02em',
-          fontSize: '26px',
-          lineHeight: '21px',
+          padding: '17px 25px 19px 25px',
+          margin: '30px 0px 0px 40px',
+          letterSpacing: '0.7px',
+          fontSize: '14px',
           fontWeight: '800',
-          fontFamily: 'Raleway',
-          width: '379px',
-          height: '78px',
+          fontFamily: 'Raleway, sans-serif',
           color: '#eaeaea',
           borderColor: '#eaeaea',
           backgroundColor: '#cc2525',
-          transition: 'background-color 300ms, border-color 300ms', 
+          transition: 'background-color 300ms, border-color 300ms',
           '&:hover': {
             backgroundColor: '#a61818',
             borderColor: '#3f9c14',
           },
-
         }}
       >
         {title}
@@ -90,7 +87,7 @@ export const HeaderButton = ({ title, onClick }) => {
   );
 };
 
-export const PhoneButton = ({ phoneNumber }) => {
+export const PhoneButton = ({ phoneNumber, buttonText }) => {
   return (
     <Link to={`tel:${phoneNumber}`} style={{ textDecoration: 'none' }}>
       <Button
@@ -105,6 +102,57 @@ export const PhoneButton = ({ phoneNumber }) => {
         }}
       >
         <PermPhoneMsgIcon sx={{ marginRight: '8px' }} />
+        {buttonText && (
+          <span
+            sx={{
+              fontFamily: 'Raleway, Sans-serif',
+              fontSize: '14px',
+              fontWeight: 800,
+              textTransform: 'uppercase',
+              letterSpacing: '0.7px',
+              marginLeft: '10px', 
+            }}
+          >
+            {buttonText}
+          </span>
+        )}
+      </Button>
+    </Link>
+  );
+};
+
+export const InstagramButton = ({ profileLink, buttonText }) => {
+  return (
+    <Link to={profileLink} style={{ textDecoration: 'none' }}>
+      <Button
+        type="button"
+        disableElevation
+        sx={{
+          display: 'flex',
+          color: '#eaeaea',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          width: '100%',
+          height: '49px',
+        }}
+      >
+        {/* Ваша іконка MUI для Instagram */}
+        <InstagramIcon sx={{ marginRight: '8px' }} />
+
+        {buttonText && (
+          <span
+            sx={{
+              fontFamily: 'Raleway, Sans-serif',
+              fontSize: '14px',
+              fontWeight: 800,
+              textTransform: 'uppercase',
+              letterSpacing: '0.7px',
+              marginLeft: '10px', // Відступ поряд з іконкою
+            }}
+          >
+            {buttonText}
+          </span>
+        )}
       </Button>
     </Link>
   );

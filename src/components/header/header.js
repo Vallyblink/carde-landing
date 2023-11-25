@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
-
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import {
   HeaderContainer,
-  Logo,
-  MobileMenu,
-  Navigation,
   HeaderSection,
-  MobileTitle
+  Logo,
+  Navigation,
+  MobileMenu,
+  MobileTitle,
+  MobileHeader,
+  LogoContainer,
+  SocialIcons,
+  MobileSocialIcons,
+  CloseButton,
+  MobileLogo
 } from './header.styled';
-import { HeaderButton, MenuButton, PhoneButton } from 'components/buttons/button';
+import { HeaderButton, PhoneButton, InstagramButton } from 'components/buttons/button';
+import sprite from '../../sprite.svg';
 
 const buttons = ['Price', 'About Us', 'Contacts'];
 
@@ -22,31 +29,56 @@ const Header = () => {
   };
 
   return (
-    <HeaderContainer>
+    <>
       <HeaderSection>
-        <Logo>
-          "Logo here"
-        </Logo>
-        <Navigation>
-          {buttons.map((button, index) => (
-            <HeaderButton key={index} title={button}/>
-          ))}
-        </Navigation>
-              
-        <InstagramIcon onClick={() => window.open("https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==")}/>
-        <PhoneButton phoneNumber="+380969551338"/>
-        
-        <MenuButton onClick={toggleMobileMenu}></MenuButton>
-        {isMobileMenuOpen && (
-          <MobileMenu>
-            <MobileTitle>Категорії</MobileTitle>
+        <HeaderContainer>
+          <LogoContainer>
+            <Logo>
+              <svg width="130" height="100">
+                <use href={sprite + '#icon-logo-removebg-preview-1'} />
+              </svg>
+            </Logo>
+          </LogoContainer>
+          <Navigation>
             {buttons.map((button, index) => (
               <HeaderButton key={index} title={button}/>
             ))}
-          </MobileMenu>
-        )}
+          </Navigation>
+          <SocialIcons>
+              <InstagramIcon onClick={() => window.open("https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==")}/>
+            <PhoneButton phoneNumber="+380969551338" />
+          </SocialIcons>
+          <MenuIcon onClick={toggleMobileMenu} sx={{
+              '@media screen and (min-width: 780px)': {
+              display: 'none',
+              },
+  }}></MenuIcon>
+          {isMobileMenuOpen && (
+            <MobileMenu>
+              <CloseButton onClick={toggleMobileMenu} >
+                <CloseIcon />
+              </CloseButton>
+              <MobileTitle>Категорії</MobileTitle>
+              {buttons.map((button, index) => (
+                <HeaderButton key={index} title={button}/>
+              ))}
+            </MobileMenu>
+          )}
+        </HeaderContainer>
+        <MobileHeader>
+            <MobileLogo>
+              <svg width="200" height="100">
+                <use href={sprite + '#icon-logo-removebg-preview-1'} />
+              </svg>
+            </MobileLogo>
+          <MobileSocialIcons>
+            <InstagramButton profileLink="https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==" buttonText= "cardedetailing" />
+            <PhoneButton phoneNumber="+380969551338" buttonText="+380969551338"/>
+          </MobileSocialIcons>
+      </MobileHeader>
       </HeaderSection>
-    </HeaderContainer>
+      
+    </>
   );
 };
 

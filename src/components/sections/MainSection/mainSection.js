@@ -23,7 +23,7 @@ const MainSectionSlider = ({ sliders }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, 
+    autoplay: true,
     autoplaySpeed: 3000,
     beforeChange: (current, next) => setCurrentSlide(next),
   };
@@ -36,7 +36,7 @@ const MainSectionSlider = ({ sliders }) => {
   return (
     <SliderContainer>
       <Slider ref={sliderRef} {...settings}>
-        {sliders.map((slider, index) => (
+        {sliders.map((slider) => (
           <SlideContainer key={slider.id}>
             <CenteredImageContainer>
               <SlideImage src={slider.image} alt={`Slide ${slider.id}`} />
@@ -47,16 +47,16 @@ const MainSectionSlider = ({ sliders }) => {
             </SlideContent>
           </SlideContainer>
         ))}
+        
       </Slider>
-
       <SliderNav>
-        <NavButton className="prev" onClick={() => goToSlide(currentSlide - 1)}>
-          <NavigateBeforeIcon fontSize="large"/>
-        </NavButton>
-        <NavButton className="next" onClick={() => goToSlide(currentSlide + 1)}>
-          <NavigateNextIcon fontSize="large"/>
-        </NavButton>
-      </SliderNav>
+          <NavButton className="prev" onClick={() => goToSlide(currentSlide - 1)}>
+            <NavigateBeforeIcon fontSize="large"/>
+          </NavButton>
+          <NavButton className="next" onClick={() => goToSlide(currentSlide + 1)}>
+            <NavigateNextIcon fontSize="large"/>
+          </NavButton>
+        </SliderNav>
     </SliderContainer>
   );
 };

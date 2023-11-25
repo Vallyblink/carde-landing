@@ -7,7 +7,7 @@ const Section = styled.section`
   align-items: center;
   padding-bottom: 20px;
   position: relative;
- z-index: 5;
+ 
   @media (max-width: 780px) {
     flex-wrap: wrap;
   }
@@ -20,7 +20,7 @@ const Box = styled.div`
   transition: transform 0.5s ease-in-out;
   background-color: aqua;
   height: 350px;
-  z-index: 5;
+ ;
 
   &:hover {
     transform: rotateY(180deg);
