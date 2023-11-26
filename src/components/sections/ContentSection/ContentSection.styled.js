@@ -40,8 +40,9 @@ export const Card = styled.div`
   margin: -70px 0 0 0;
   padding: 0 15px;
   transform-style: preserve-3d;
-  transition: transform 0.8s;
+  transition: transform 1.5s;
   cursor: pointer;
+   transform: rotateY(${props => (props.isFlipped ? '0deg' : '180deg')});
 
   @media (min-width: 1200px) {
      &:hover,
@@ -89,9 +90,10 @@ export const FrontSide = styled.div`
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  transform: rotateY(${props => (props.isFlipped ? '180deg' : '0deg')});
+   transform: rotateY(${props => (props.isFlipped ? '0deg' : '180deg')});
+  
   overflow: hidden;
-  transition: transform 0.8s;
+  transition: transform 1.5s;
   background: rgba(0, 0, 0, 0.5);
 `;
 
@@ -115,6 +117,8 @@ export const SlideContent = styled.p`
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.9px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  perspective: 500px;
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -143,6 +147,7 @@ export const BackContent = styled.div`
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.9px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -179,8 +184,8 @@ export const BackSide = styled.div`
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
-  transform: rotateY(${props => (props.isFlipped ? '0deg' : '180deg')});
-  transition: transform 0.8s;
+  transform: rotateY(${props => (props.isFlipped ? '180deg' : '360deg')});
+  transition: transform 1.5s;
 
   &:before {
     content: '';
