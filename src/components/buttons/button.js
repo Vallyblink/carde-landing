@@ -98,24 +98,16 @@ export const PhoneButton = ({ phoneNumber, buttonText }) => {
           color: '#eaeaea',
           alignItems: 'center',
           width: '100%',
-          height: '49px',
+          height: '40px',
+          fontSize: '14px',
+          fontWeight: 700,
+          letterSpacing: '0.6px',
         }}
       >
-        <PermPhoneMsgIcon sx={{ marginRight: '8px' }} />
-        {buttonText && (
-          <span
-            sx={{
-              fontFamily: 'Raleway, Sans-serif',
-              fontSize: '14px',
-              fontWeight: 800,
-              textTransform: 'uppercase',
-              letterSpacing: '0.7px',
-              marginLeft: '10px', 
-            }}
-          >
-            {buttonText}
-          </span>
-        )}
+        <PermPhoneMsgIcon sx={{width: '20px',
+          height: '20px', marginRight: '3px' }} />
+        {buttonText} 
+     
       </Button>
     </Link>
   );
@@ -133,26 +125,19 @@ export const InstagramButton = ({ profileLink, buttonText }) => {
           alignItems: 'center',
           justifyContent: 'space-between',
           width: '100%',
-          height: '49px',
+          height: '40px',
+          fontFamily: 'Raleway, Sans-serif',
+          fontSize: '14px',
+          fontWeight: 700,
+          textTransform: 'uppercase',
+          letterSpacing: '0.7px',
+          
         }}
       >
-        {/* Ваша іконка MUI для Instagram */}
-        <InstagramIcon sx={{ marginRight: '8px' }} />
+        <InstagramIcon sx={{ width: '20px',
+          height: '20px', marginRight: '3px' }} />
 
-        {buttonText && (
-          <span
-            sx={{
-              fontFamily: 'Raleway, Sans-serif',
-              fontSize: '14px',
-              fontWeight: 800,
-              textTransform: 'uppercase',
-              letterSpacing: '0.7px',
-              marginLeft: '10px', // Відступ поряд з іконкою
-            }}
-          >
-            {buttonText}
-          </span>
-        )}
+        {buttonText }
       </Button>
     </Link>
   );

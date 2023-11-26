@@ -2,20 +2,19 @@
 import styled from 'styled-components';
 
 export const HeaderSection = styled.header`
-  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5); 
   color: #fff;
   font-family: "Raleway", Sans-serif;
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 1; 
   top:0px;
   @media screen and (min-width: 320px) and (max-width: 750px) {
-   height: 230px;
    background-color: transparent; 
+    height: 60px;
     MenuIcon {
     display: none;
   }
@@ -23,18 +22,18 @@ export const HeaderSection = styled.header`
 `;
 
 export const HeaderContainer = styled.div`
-  max-width: 1170px;
+  position: fixed;
+  top:0px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-  background-color: transparent; 
+  background-color: rgba(0, 0, 0, 0.5); 
   color: #fff;
-  position: fixed;
   padding: 0 20px;
   box-sizing: border-box;
-  top:0px;
+ 
 
   @media screen and (max-width: 1200px) {
     justify-content: center;
@@ -60,12 +59,10 @@ export const Logo = styled.div`
   }
 `;
 
-export const MobileLogo = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: -25px;
-`;
 
+export const MobileSVG = styled.svg`
+  margin: -10px 0 -25px 0;;
+`;
 export const LogoPicture = styled.div`
   margin-right: 10px; 
 `;
@@ -109,7 +106,19 @@ export const MobileMenu = styled.div`
     overflow-y: hidden;
     background-color: rgba(0, 0, 0, 0.9); 
     color: #afafaf;
-    padding: 30px 20px; // Adjust padding as needed
+    padding: 30px 20px; 
+ }
+`;
+
+export const BackDrop = styled.div`
+  @media screen and (max-width: 768px) {
+        display:block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); 
  }
 `;
 
@@ -136,7 +145,7 @@ export const MobileHeader = styled.div`
     flex-direction: column;
     height: 165px;
     background-color: #19191a; 
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 50px; 
     z-index: -1;
@@ -160,7 +169,7 @@ export const SocialIcons = styled.div`
 
 export const MobileSocialIcons = styled.div`
   display: flex;
-  gap: 50px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 

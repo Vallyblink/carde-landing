@@ -14,7 +14,8 @@ import {
   SocialIcons,
   MobileSocialIcons,
   CloseButton,
-  MobileLogo
+  MobileSVG,
+  BackDrop
 } from './header.styled';
 import { HeaderButton, PhoneButton, InstagramButton } from 'components/buttons/button';
 import sprite from '../../sprite.svg';
@@ -27,11 +28,13 @@ const Header = () => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
+  
 
   return (
     <>
       <HeaderSection>
         <HeaderContainer>
+
           <LogoContainer>
             <Logo>
               <svg width="130" height="100">
@@ -39,21 +42,21 @@ const Header = () => {
               </svg>
             </Logo>
           </LogoContainer>
+
           <Navigation>
             {buttons.map((button, index) => (
               <HeaderButton key={index} title={button}/>
             ))}
           </Navigation>
+
           <SocialIcons>
               <InstagramIcon onClick={() => window.open("https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==")}/>
             <PhoneButton phoneNumber="+380969551338" />
           </SocialIcons>
-          <MenuIcon onClick={toggleMobileMenu} sx={{
-              '@media screen and (min-width: 780px)': {
-              display: 'none',
-              },
-  }}></MenuIcon>
+          
+          <MenuIcon onClick={toggleMobileMenu} sx={{ '@media screen and (min-width: 780px)': { display: 'none' }, }}></MenuIcon>
           {isMobileMenuOpen && (
+            <BackDrop onClick={toggleMobileMenu}>
             <MobileMenu>
               <CloseButton onClick={toggleMobileMenu} >
                 <CloseIcon />
@@ -62,15 +65,15 @@ const Header = () => {
               {buttons.map((button, index) => (
                 <HeaderButton key={index} title={button}/>
               ))}
-            </MobileMenu>
+              </MobileMenu>
+            </BackDrop>
           )}
         </HeaderContainer>
+
         <MobileHeader>
-            <MobileLogo>
-              <svg width="200" height="100">
+              <MobileSVG >
                 <use href={sprite + '#icon-logo-removebg-preview-1'} />
-              </svg>
-            </MobileLogo>
+              </MobileSVG>
           <MobileSocialIcons>
             <InstagramButton profileLink="https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==" buttonText= "cardedetailing" />
             <PhoneButton phoneNumber="+380969551338" buttonText="+380969551338"/>
