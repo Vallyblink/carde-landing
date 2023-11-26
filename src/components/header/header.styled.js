@@ -1,4 +1,4 @@
-// header.styled.js
+
 import styled from 'styled-components';
 
 export const HeaderSection = styled.header`
@@ -43,6 +43,7 @@ export const HeaderContainer = styled.div`
     justify-content: space-between;
     background-color: #000000;
     height: 60px;
+    z-index: 2;
    
   }
 `;
@@ -148,7 +149,7 @@ export const MobileHeader = styled.div`
     position: absolute;
     width: 100%;
     top: 50px; 
-    z-index: -1;
+    z-index: 1;
   }
 `;
 

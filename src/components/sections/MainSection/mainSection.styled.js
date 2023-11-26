@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 export const SliderContainer = styled.section`
 position: relative;  
@@ -38,6 +38,24 @@ export const SlideImage = styled.img`
   z-index:-1;
 `;
 
+const fadeIn = keyframes`
+  from {
+    transform: translateY(70%);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(70%);
+  }
+`;
+
 export const SlideContent = styled.div`
   position: absolute;
   top: 50%;
@@ -50,9 +68,6 @@ export const SlideContent = styled.div`
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.9px;
-  transform: translateY(-50%);
-  animation: slideIn 4s ease-out 0.1s both; /* Змініть тривалість на 4 секунди */
-  visibility: hidden;
   overflow: hidden;
 
   h3 {
@@ -75,30 +90,14 @@ export const SlideContent = styled.div`
     }
   }
   
-  @keyframes slideIn {
-    0% {
-      transform: translateY(70%);
-      visibility: hidden;
-    }
-    30% {
-      transform: translateY(-50%);
-      visibility: visible;
-    }
-    80% {
-      transform: translateY(-50%);
-      visibility: visible;
-    }
-    90% {
-     visibility: hidden;
-     transform: translateY(70%);
-    }
-    100% {
-      visibility: hidden;
-      
-    }
-  }
-`;
+  ${({ active }) => active && css`
+    animation: ${fadeIn} 0.5s ease-out 0.1s both;
+  `}
 
+  ${({ active }) => !active && css`
+    animation: ${fadeOut} 0.5s ease-out both;
+  `}
+`;
 export const SliderNav = styled.div`
   position: absolute;
   top: 50%;
