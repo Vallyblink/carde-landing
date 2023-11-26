@@ -31,7 +31,7 @@ export const Container = styled.div`
 
 export const Card = styled.div`
   perspective: 1000px;
-  width: 300px;
+  width: 350px;
   height: 350px;
   margin: -70px 0px 0px 0px;
   padding: 0px 15px 0px 15px;
