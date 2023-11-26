@@ -12,7 +12,7 @@ width: 100%;
 
   @media (max-width: 480px) {
     height: 500px;
-    margin-top:100px;
+    margin-top:50px;
   }
 `;
 
