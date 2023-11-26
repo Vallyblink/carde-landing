@@ -27,6 +27,10 @@ export const Container = styled.div`
   @media (max-width: 780px) {
     flex-wrap: wrap;
   }
+  @media (max-width: 400px) {
+    margin:0px;
+   
+  }
 `;
 
 export const Card = styled.div`
@@ -47,7 +51,11 @@ export const Card = styled.div`
    &:active {
     transform: rotateY(180deg);
   }
-
+    @media (max-width: 400px) {
+    padding: 0 10px; 
+    width: 320px;
+   
+  }
 `;
 
 export const Box = styled.div`

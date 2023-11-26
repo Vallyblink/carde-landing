@@ -42,9 +42,18 @@ export const SlideContent = styled.div`
   position: absolute;
   top: 50%;
   left: 10%;
-  transform: translateY(-50%);
   text-align: left;
   color: #fff;
+  align-self: flex-start;
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  transform: translateY(-50%);
+  animation: slideIn 4s ease-out 0.1s both; /* Змініть тривалість на 4 секунди */
+  visibility: hidden;
+  overflow: hidden;
 
   h3 {
     color: #ffffff;
@@ -63,6 +72,29 @@ export const SlideContent = styled.div`
 
     @media (max-width: 480px) {
       font-size: 30px;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(70%);
+      visibility: hidden;
+    }
+    30% {
+      transform: translateY(-50%);
+      visibility: visible;
+    }
+    80% {
+      transform: translateY(-50%);
+      visibility: visible;
+    }
+    90% {
+     visibility: hidden;
+     transform: translateY(70%);
+    }
+    100% {
+      visibility: hidden;
+      
     }
   }
 `;

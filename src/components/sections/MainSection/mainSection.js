@@ -17,6 +17,7 @@ const MainSectionSlider = ({ sliders }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef(null);
 
+
   const settings = {
     dots: true,
     infinite: true,
@@ -24,13 +25,19 @@ const MainSectionSlider = ({ sliders }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
-    beforeChange: (current, next) => setCurrentSlide(next),
+    autoplaySpeed: 4000,
+    afterChange: (index) => {
+      setCurrentSlide(index);
+      
+    },
   };
 
-  const goToSlide = (slideIndex) => {
-    setCurrentSlide(slideIndex);
-    sliderRef.current.slickGoTo(slideIndex);
+  
+
+  const goToSlide = (index) => {
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(index);
+    }
   };
 
   return (
@@ -41,7 +48,7 @@ const MainSectionSlider = ({ sliders }) => {
             <CenteredImageContainer>
               <SlideImage src={slider.image} alt={`Slide ${slider.id}`} />
             </CenteredImageContainer>
-            <SlideContent>
+            <SlideContent key={currentSlide} >
               <h3>{slider.text}</h3>
               <MainButton title={slider.buttonText}/>
             </SlideContent>
