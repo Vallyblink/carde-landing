@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Section = styled.section`
   display: flex;
   justify-content: center;
@@ -56,15 +57,8 @@ export const Card = styled.div`
     padding: 0 10px; 
     width: 320px;
   }
-
-  @media (hover: none) and (pointer: coarse) {
-    &:hover {
-      transform: rotateY(-180deg) ;
-    }
-
-    &:active {
-      transform: rotateY(-180deg);
-    }
+&:focus {
+    outline: none; 
   }
 `;
 
@@ -84,6 +78,9 @@ export const Box = styled.div`
     width: 100%;
     height: 300px;
   }
+ &:focus {
+    outline: none; 
+  }
 `;
 
 export const FrontSide = styled.div`
@@ -92,7 +89,9 @@ export const FrontSide = styled.div`
   height: 100%;
   backface-visibility: hidden;
    transform: rotateY(${props => (props.isFlipped ? '0deg' : '180deg')});
-  
+&:focus {
+    outline: none; 
+  }
   overflow: hidden;
   transition: transform 1.5s;
   background: rgba(0, 0, 0, 0.5);
@@ -102,6 +101,9 @@ export const SlideImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+ &:focus {
+    outline: none; 
+  }
 `;
 
 export const SlideContent = styled.p`
@@ -121,7 +123,9 @@ export const SlideContent = styled.p`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   perspective: 500px;
   transform-style: preserve-3d;
-
+   &:focus {
+    outline: none; 
+  }
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -151,7 +155,9 @@ export const BackContent = styled.div`
   letter-spacing: 0.9px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-
+&:focus {
+    outline: none; 
+  }
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -179,6 +185,9 @@ export const BackButton = styled.div`
   &:hover{
     color: #fff;
   }
+  &:focus {
+    outline: none; 
+  }
 `;
 
 export const BackSide = styled.div`
@@ -192,14 +201,9 @@ export const BackSide = styled.div`
   backface-visibility: hidden;
   transform: rotateY(${props => (props.isFlipped ? '180deg' : '360deg')});
   transition: transform 1.5s;
-
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backface-visibility: hidden;
+&:focus {
+    outline: none; 
+  }
   }
 `;
 
@@ -210,5 +214,7 @@ export const CardContent = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
-
+&:focus {
+    outline: none; 
+  }
 `;
