@@ -38,6 +38,7 @@ const MainSectionSlider = ({ sliders }) => {
   };
 
   return (
+    <section id="main">
     <SliderContainer>
       <Slider ref={sliderRef} {...settings}>
         {sliders.map((slider, index) => (
@@ -45,7 +46,7 @@ const MainSectionSlider = ({ sliders }) => {
             <CenteredImageContainer>
               <SlideImage src={slider.image} alt={`Slide ${slider.id}`} />
             </CenteredImageContainer>
-            <SlideContent active={currentSlide === index}>
+            <SlideContent active={currentSlide === index ? 'true' : 'false'}>
               <h3>{slider.text}</h3>
               <MainButton title={slider.buttonText}/>
             </SlideContent>
@@ -60,7 +61,8 @@ const MainSectionSlider = ({ sliders }) => {
           <NavigateNextIcon fontSize="large"/>
         </NavButton>
       </SliderNav>
-    </SliderContainer>
+      </SliderContainer>
+    </section>
   );
 };
 

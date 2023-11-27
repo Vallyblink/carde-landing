@@ -4,9 +4,6 @@ export const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  padding: 0px 0px 70px 0px;
-  background-color: #f0f0f0;
   position: relative;
 
   @media (max-width: 780px) {
@@ -23,7 +20,11 @@ export const Container = styled.div`
   margin-left: auto;
   position: relative;
   max-width: 1200px;
+   width: 100%;
 
+   @media (max-width: 1000px) {
+    flex-wrap: wrap;
+  }
   @media (max-width: 780px) {
     flex-wrap: wrap;
   }
@@ -42,15 +43,14 @@ export const Card = styled.div`
   transform-style: preserve-3d;
   transition: transform 1.5s;
   cursor: pointer;
-   transform: rotateY(${props => (props.isFlipped ? '0deg' : '180deg')});
+  transform: rotateY(${props => (props.isFlipped ? '0deg' : '180deg')}) translateZ(125px);
 
   @media (min-width: 1200px) {
-     &:hover,
-  &:active {
-    transform: rotateY(180deg);
+    &:hover,
+    &:active {
+      transform: rotateY(180deg) translateZ(125px);
+    }
   }
-  }
- 
 
   @media (max-width: 400px) {
     padding: 0 10px; 
@@ -59,14 +59,15 @@ export const Card = styled.div`
 
   @media (hover: none) and (pointer: coarse) {
     &:hover {
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg) translateZ(-50px);
     }
 
     &:active {
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg) translateZ(-50px);
     }
   }
 `;
+
 
 export const Box = styled.div`
   position: relative;
@@ -80,7 +81,7 @@ export const Box = styled.div`
   }
 
   @media (min-width: 781px) and (max-width: 1200px) {
-    width: 48%;
+    width: 100%;
     height: 300px;
   }
 `;
@@ -108,7 +109,7 @@ export const SlideContent = styled.p`
   top: 50%;
   left: 10%;
   right: 10%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateZ(125px);
   text-align: left;
   color: #fff;
   align-self: flex-start;
@@ -119,6 +120,7 @@ export const SlideContent = styled.p`
   letter-spacing: 0.9px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   perspective: 500px;
+  transform-style: preserve-3d;
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -147,6 +149,7 @@ export const BackContent = styled.div`
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.9px;
+  color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 
   @media (max-width: 768px) {
@@ -173,6 +176,9 @@ export const BackButton = styled.div`
   font-size: 28px;
   font-weight: 800;
   color: #cc2525;
+  &:hover{
+    color: #fff;
+  }
 `;
 
 export const BackSide = styled.div`
@@ -204,4 +210,6 @@ export const CardContent = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(-50px);
 `;

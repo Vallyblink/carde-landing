@@ -20,10 +20,18 @@ import {
 import { HeaderButton, PhoneButton, InstagramButton } from 'components/buttons/button';
 import sprite from '../../sprite.svg';
 
-const buttons = ['Price', 'About Us', 'Contacts'];
+const buttons = [
+  { title: 'Головна', link: 'main' },
+  { title: 'Про нас', link: 'info' },
+  { title: 'Послуги', link: 'services' },
+  { title: 'Відгуки', link: 'feedback' },
+  { title: 'Контакти', link: 'location' },
+];
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -44,8 +52,8 @@ const Header = () => {
           </LogoContainer>
 
           <Navigation>
-            {buttons.map((button, index) => (
-              <HeaderButton key={index} title={button}/>
+          {buttons.map((button, index) => (
+          <HeaderButton key={index} title={button.title} link={button.link} />
             ))}
           </Navigation>
 
@@ -63,8 +71,8 @@ const Header = () => {
               </CloseButton>
               <MobileTitle>Категорії</MobileTitle>
               {buttons.map((button, index) => (
-                <HeaderButton key={index} title={button}/>
-              ))}
+          <HeaderButton key={index} title={button.title} link={button.link} />
+            ))}
               </MobileMenu>
             </BackDrop>
           )}

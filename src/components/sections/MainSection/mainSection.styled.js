@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes} from "styled-components";
 
 export const SliderContainer = styled.section`
 position: relative;  
@@ -40,7 +40,8 @@ export const SlideImage = styled.img`
 
 const fadeIn = keyframes`
   from {
-    transform: translateY(70%);
+    transform: translateY(120%);
+    visability: hidden;
   }
   to {
     transform: translateY(-50%);
@@ -52,7 +53,7 @@ const fadeOut = keyframes`
     transform: translateY(-50%);
   }
   to {
-    transform: translateY(70%);
+    transform: translateY(120%);
   }
 `;
 
@@ -69,16 +70,22 @@ export const SlideContent = styled.div`
   text-transform: uppercase;
   letter-spacing: 0.9px;
   overflow: hidden;
-
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   h3 {
     color: #ffffff;
-    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    color: #ffffff;
+    font-family: "Raleway", Sans-serif;
     font-size: 50px;
     font-weight: 300;
     text-transform: uppercase;
     line-height: 1em;
-    letter-spacing: 0px;
     padding: 0px 15px 0px 15px;
+    margin: 16px 0px 10px 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    perspective: 500px;
+    letter-spacing: 0px;
+ 
     margin: 53px 0px 0px 0px;
 
     @media (max-width: 768px) {
@@ -89,14 +96,11 @@ export const SlideContent = styled.div`
       font-size: 30px;
     }
   }
+  @media (max-width: 500px) {
+      font-size: 40px;
+      animation: ${({ active }) => (active === 'true' ? fadeIn : fadeOut)} 0.5s ease-out 0.1s both;
+    }
   
-  ${({ active }) => active && css`
-    animation: ${fadeIn} 0.5s ease-out 0.1s both;
-  `}
-
-  ${({ active }) => !active && css`
-    animation: ${fadeOut} 0.5s ease-out both;
-  `}
 `;
 export const SliderNav = styled.div`
   position: absolute;

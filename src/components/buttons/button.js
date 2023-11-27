@@ -50,11 +50,19 @@ export const MainButton = ({ title, onClick }) => {
   );
 };
 
-export const HeaderButton = ({ title, onClick }) => {
+export const HeaderButton = ({ title, link }) => {
+  const handleClick = () => {
+    const section = document.getElementById(link);
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <ThemeProvider theme={customTheme}>
       <Button
-        onClick={onClick}
+        onClick={handleClick}
         disableElevation
         variant="outlined"
         sx={{
@@ -82,7 +90,7 @@ export const HeaderButton = ({ title, onClick }) => {
         }}
       >
         {title}
-      </Button>
+        </Button>
     </ThemeProvider>
   );
 };
