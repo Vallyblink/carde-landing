@@ -43,12 +43,12 @@ export const Card = styled.div`
   transform-style: preserve-3d;
   transition: transform 1.5s;
   cursor: pointer;
-  transform: rotateY(${props => (props.isFlipped ? '0deg' : '180deg')}) translateZ(125px);
+  transform: rotateY(${props => (props.isFlipped ? '0deg' : '180deg')});
 
   @media (min-width: 1200px) {
     &:hover,
     &:active {
-      transform: rotateY(180deg) translateZ(125px);
+      transform: rotateY(180deg);
     }
   }
 
@@ -59,11 +59,11 @@ export const Card = styled.div`
 
   @media (hover: none) and (pointer: coarse) {
     &:hover {
-      transform: rotateY(-180deg) translateZ(-50px);
+      transform: rotateY(-180deg) ;
     }
 
     &:active {
-      transform: rotateY(-180deg) translateZ(-50px);
+      transform: rotateY(-180deg);
     }
   }
 `;
@@ -109,7 +109,7 @@ export const SlideContent = styled.p`
   top: 50%;
   left: 10%;
   right: 10%;
-  transform: translateY(-50%) translateZ(125px);
+  transform: translateY(-50%);
   text-align: left;
   color: #fff;
   align-self: flex-start;
@@ -210,6 +210,5 @@ export const CardContent = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
-  transform-style: preserve-3d;
-  transform: translateZ(-50px);
+
 `;
