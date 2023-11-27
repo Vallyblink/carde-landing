@@ -22,7 +22,7 @@ import sprite from '../../sprite.svg';
 
 const buttons = [
   { title: 'Головна', link: 'main' },
-  { title: 'Про нас', link: 'info' },
+  { title: 'Про нас', link: 'content' },
   { title: 'Послуги', link: 'services' },
   { title: 'Відгуки', link: 'feedback' },
   { title: 'Контакти', link: 'location' },

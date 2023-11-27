@@ -8,7 +8,7 @@ import ContentCard from 'components/sectionElements/ContentCard';
 
 const ContentSection = ({ infocards }) => {
   return (
-    <Section id='info'>
+    <Section id='content'>
       <Container>
         {infocards.map((infocard) => (
           <ContentCard key={infocard.id} infocard={infocard} />

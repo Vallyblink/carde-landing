@@ -35,7 +35,7 @@ const Home = () => {
       <Routes>
         <Route path="/" element={<Home />}>
         <Route path="main" element={<MainSectionSlider sliders={data} />} />
-        <Route path="info" element={<ContentSection infocards={infodata} />} />
+        <Route path="content" element={<ContentSection infocards={infodata} />} />
         <Route path="services" element={<ServicesSection services={servicedata} />} />
         <Route path="feedback" element={<FeedbackSection testimonials={testimonialsData} />} />
         <Route path="location" element={<LocationSection />} />
