@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "title": "Бронеплівка",
+    "title": "Встановленння плівки",
     "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743009/m9uferht8ozkpoqz3pov.webp",
-    "description": "Захист лакофарбового покриття від подряпин та інших пошкоджень за допомогою бронеплівки.",
+    "description": "Залежно від класу автомобіля від 250$",
     "buttonText": "Деталі",
     "buttonLink": "service/paint-protection"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "title": "Полірування",
     "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743008/sabtsloqwyyanaq4jshn.jpg",
-    "description": "Професійне полірування лакофарбового покриття для відновлення блиску та видалення подряпин.",
+    "description": "Залежно від класу автомобіля від 200$",
     "buttonText": "Деталі",
     "buttonLink": "service/polishing"
   },
@@ -19,64 +19,40 @@
     "id": 3,
     "title": "Керамічне покриття",
     "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743007/k6qs6s9nheblirzzubx3.webp",
-    "description": "Нанесення керамічного покриття для захисту лакофарбового покриття від агресивних факторів навколишнього середовища.",
+    "description": "Залежно від класу автомобіля від 200$",
     "buttonText": "Деталі",
     "buttonLink": "service/ceramic-coating"
   },
   {
     "id": 4,
-    "title": "Тонування вікон",
+    "title": "Хімчистка",
     "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1701041392/Cats/eqn5bsp07ag2wafa0pas.png",
-    "description": "Затемнення автомобільних вікон для підвищення конфіденційності та захисту від сонячного випромінювання.",
+    "description": "Залежно від класу автомобіля від 5000грн",
     "buttonText": "Деталі",
     "buttonLink": "service/window-tinting"
   },
   {
     "id": 5,
-    "title": "Хімчистка салону",
+    "title": "Тонування",
     "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1701041390/Cats/snryi0uqyszocopkjzql.jpg",
-    "description": "Глибоке очищення салону автомобіля від забруднень та неприємних запахів за допомогою професійних засобів.",
+    "description": "Залежно від класу автомобіля від 4000грн",
     "buttonText": "Деталі",
     "buttonLink": "service/interior-detailing"
   },
   {
     "id": 6,
-    "title": "Антідождь",
+    "title": "Фари",
     "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1701041388/Cats/h9vdz4ttnt34xv89zp9e.webp",
-    "description": "Нанесення антідощового покриття для покращення видимості та безпеки під час дощу.",
+    "description": "Залежно від класу автомобіля від 100$",
     "buttonText": "Деталі",
     "buttonLink": "service/rain-repellent"
   },
   {
     "id": 7,
-    "title": "Автозвук",
+    "title": "Задні фари",
     "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1701041381/Cats/yii3esv0qcllujp4sns7.jpg",
-    "description": "Встановлення та налаштування аудіосистеми для підвищення звукового комфорту в автомобілі.",
+    "description":"Залежно від класу автомобіля від 50$",
     "buttonText": "Деталі",
     "buttonLink": "service/car-audio"
-  },
-  {
-    "id": 8,
-    "title": "Автоелектрика",
-    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1701041376/Cats/ukgwjceykw8rbzumigjk.jpg",
-    "description": "Ремонт та обслуговування електричної системи автомобіля для забезпечення правильної роботи всіх електричних компонентів.",
-    "buttonText": "Деталі",
-    "buttonLink": "service/auto-electrics"
-  },
-  {
-    "id": 9,
-    "title": "Діагностика",
-    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1701041368/Cats/tp9y0jmekrnofskyc1h7.jpg",
-    "description": "Комплексна діагностика автомобіля для виявлення потенційних проблем та забезпечення його ефективної роботи.",
-    "buttonText": "Деталі",
-    "buttonLink": "service/diagnostics"
-  },
-  {
-    "id": 10,
-    "title": "Тюнінг",
-    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1701041367/Cats/ycgmkxzo8mnfgs4v8yon.jpg",
-    "description": "Індивідуалізація та модифікація автомобіля для надання унікального вигляду та підвищення його технічних характеристик.",
-    "buttonText": "Деталі",
-    "buttonLink": "service/tuning"
   }
 ]

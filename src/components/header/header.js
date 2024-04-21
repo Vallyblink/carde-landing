@@ -83,8 +83,8 @@ const Header = () => {
                 <use href={sprite + '#icon-logo-removebg-preview-1'} />
               </MobileSVG>
           <MobileSocialIcons>
-            <InstagramButton profileLink="https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==" buttonText= "cardedetailing" />
-            <PhoneButton phoneNumber="+380969551338" buttonText="+380969551338"/>
+            <InstagramButton profileLink="https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==" buttonText= "Наш Instagram" />
+            <PhoneButton phoneNumber="+380969551338" buttonText="Зателефонувати"/>
           </MobileSocialIcons>
       </MobileHeader>
       </HeaderSection>

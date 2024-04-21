@@ -1,72 +1,44 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useRef, useState } from 'react';
+import { Button, Section, Slide, SliderContainer, SliderContent, SliderTitle, Avatar, NameDiv } from './FeedBackSection.styled';
+import Slider from "react-slick";
 
-const Section = styled.div`
-  height: 250px;
-  margin-bottom: 30px;
-  overflow: hidden;
-  background-color: #deb1b1;
-`;
+const FeedbackSection = ({ feedback }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null);
 
-const SliderContainer = styled.div`
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-  
-`;
-
-const SliderContent = styled.div`
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-`;
-
-const Slide = styled.div`
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 20px;
-  text-align: center;
-`;
-
-const Button = styled.button`
-  background-color: #cc2525;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 15px;
-  margin-right: 60px;
-  cursor: pointer;
-  font-size: 16px;
-
-`;
-
-const FeedbackSection = ({ testimonials }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    beforeChange: (current, next) => setCurrentSlide(next),
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+  const goToSlide = (index) => {
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(index);
+    }
   };
 
   return (
     <Section id='feedback'>
       <SliderContainer>
-        <h3>Відгуки  TEST</h3>
-        <SliderContent style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {testimonials.map((testimonial, index) => (
-            <Slide key={index}>
-              <h3>{testimonial.author}</h3>
-              <p>{testimonial.comment}</p>
+        <SliderTitle>Відгуки</SliderTitle>
+        <Slider {...settings} ref={sliderRef}>
+          {feedback.map((feedback) => (
+            <Slide key={feedback.key}>
+              <NameDiv>
+              <Avatar src={feedback.avatar} alt="Avatar" />
+              <h3>{feedback.name}</h3>
+              </NameDiv>  
+              <p>{feedback.comment}</p>
             </Slide>
           ))}
-        </SliderContent>
-        <Button onClick={prevSlide}>Previous</Button>
-        <Button onClick={nextSlide}>Next</Button>
+        </Slider>
+        <Button onClick={() => goToSlide(currentSlide - 1)}>Попередній</Button>
+        <Button onClick={() => goToSlide(currentSlide + 1)}>Наступний</Button>
       </SliderContainer>
     </Section>
   );

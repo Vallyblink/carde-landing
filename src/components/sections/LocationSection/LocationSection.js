@@ -20,9 +20,9 @@ const LocationSection = () => {
         </LogoSvg>
           <InstagramButton
             profileLink="https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA=="
-            buttonText="cardedetailing"
+            buttonText="Наш Instagram"
           />
-          <PhoneButton phoneNumber="+380969551338" buttonText="+380969551338" />
+          <PhoneButton phoneNumber="+380969551338" buttonText="Зателефонувати" />
          <Text>
             Ми знаходимось за адресою: </Text>
             <Span>вулиця Київська, 98а, Тарасівка, Київська обл., 08161</Span>

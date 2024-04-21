@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Марія Петренко",
+      "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1692540914/samples/outdoor-woman.jpg",
+      "comment": "Дуже задоволена результатом шліфування. Авто виглядає ідеально, ніби щойно з салону. Професіоналізм персоналу вражає! Рекомендую!",
+      "key": "1"
+    },
+    {
+      "name": "Іван Ковальчук",
+      "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1692540915/samples/man-on-a-street.jpg",
+      "comment": "Хочу висловити подяку за чудову хімчистку моєї машини. Результат перевищив очікування. Дуже задоволений якістю роботи!",
+      "key": "2"
+    },
+    {
+      "name": "Олександр Іванов",
+      "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1692540914/samples/look-up.jpg",
+      "comment": "Велике спасибі за полірування автомобіля. Шикарний результат, який бачать всі навколо. Тепер моє авто справді виглядає як нове!",
+      "key": "3"
+    }
+  ]
+  

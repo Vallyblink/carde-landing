@@ -9,12 +9,7 @@ import FeedbackSection from './sections/FeedbackSection/FeedbackSection';
 import data from '../data/mainSlider.json';
 import infodata from '../data/infoSlider.json';
 import servicedata from '../data/servicesSection.json';
-
-const testimonialsData = [
-  { author: 'John Doe', comment: 'Great service! I highly recommend it.' },
-  { author: 'Jane Smith', comment: 'Excellent work. Very satisfied with the results.' },
-  // Add more testimonials as needed
-];
+import feedback from '../data/feedback.json';
 
 const Home = () => {
   return (
@@ -22,7 +17,7 @@ const Home = () => {
       <MainSectionSlider sliders={data} />
       <ContentSection infocards={infodata} />
       <ServicesSection services={servicedata} />
-      <FeedbackSection testimonials={testimonialsData} />
+      <FeedbackSection feedback={feedback} />
       <LocationSection />
     </>
   );
@@ -37,7 +32,7 @@ const Home = () => {
         <Route path="main" element={<MainSectionSlider sliders={data} />} />
         <Route path="content" element={<ContentSection infocards={infodata} />} />
         <Route path="services" element={<ServicesSection services={servicedata} />} />
-        <Route path="feedback" element={<FeedbackSection testimonials={testimonialsData} />} />
+        <Route path="feedback" element={<FeedbackSection feedback={feedback} />} />
         <Route path="location" element={<LocationSection />} />
         </Route>
       </Routes>

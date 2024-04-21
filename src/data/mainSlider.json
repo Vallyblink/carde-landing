@@ -1,29 +1,38 @@
 [
   {
     "id": 1,
-    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743009/m9uferht8ozkpoqz3pov.webp",
-    "text": "Bla bla bla bla bla? Some information on this slider to see",
+    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1713706702/aojvss4bafd9axnmmerm.jpg",
+    "text": ["Ми команда CarDe.", "Перетворюємо автомобілі в шедеври детейлінгу, створюючи неперевершені враження."],
     "buttonText": "some button",
     "buttonLink": "sectionID"
   },
   {
     "id": 2,
-    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743008/sabtsloqwyyanaq4jshn.jpg",
-    "text": "Другий слайд",
+    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1713706697/vzst8cna9tsqktzsbzu5.jpg",
+    "text": ["Ми дотримуємося найвищих стандартів якості та докладаємо уваги до кожної деталі, щоб кожен автомобіль привертав погляди і викликав захоплення, а його власник - почувався особливим." ],
     "buttonText": "Відкрити",
     "buttonLink": "sectionID"
   },
+  
   {
     "id": 3,
-    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743007/k6qs6s9nheblirzzubx3.webp",
-    "text": "Третій слайд",
+    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1713706703/cnq0ye07pb0znbymyeij.jpg",
+    "text": [" Наша експертність і вміння працювати з найвищою якістю матеріалів дозволяють нам створювати результати, що перевершують очікування навіть найвибагливіших клієнтів."],
     "buttonText": "Придбати зараз",
     "buttonLink": "sectionID"
   },
   {
     "id": 4,
-    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700743007/tp6opdtclrwfejbgbd56.jpg",
-    "text": "Четвертий слайд",
+    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1713706695/o1146bktszsohlraagy3.jpg",
+    "text": ["Обираючи нас, ви обираєте не просто сервіс детейлінгу, але й ексклюзивне перевтілення вашого авто."],
+    "buttonText": "Придбати зараз",
+    "buttonLink": "sectionID"
+  },
+  
+  {
+    "id": 5,
+    "image": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1713706693/gk8zy65lyw2sqhwhxeum.jpg",
+    "text": [" Довірте свій автомобіль нашій команді і переконайтеся, що ми робимо кожен автомобіль неперевершеним у кожній деталі."],
     "buttonText": "Придбати зараз",
     "buttonLink": "sectionID"
   }

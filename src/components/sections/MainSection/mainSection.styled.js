@@ -2,7 +2,7 @@ import styled, { keyframes} from "styled-components";
 
 export const SliderContainer = styled.section`
 position: relative;  
-width: 100%;
+  width: 100%;
   height: 800px;
   overflow: hidden;
 
@@ -11,8 +11,8 @@ width: 100%;
   }
 
   @media (max-width: 480px) {
-    height: 500px;
-    margin-top:50px;
+    height: 550px;
+    margin-top:100px;
   }
 `;
 
@@ -21,7 +21,7 @@ export const SlideContainer = styled.div`
   height: 800px;
   overflow: hidden;
   position: relative;
-
+  background-color: rgba(0, 0, 0, 0.4); 
   @media (max-width: 768px) {
     height: 700px;
   }
@@ -36,6 +36,7 @@ export const SlideImage = styled.img`
   height: 100%;
   object-fit: cover;
   z-index:-1;
+  background-color: rgba(0, 0, 0, 0.5); 
 `;
 
 const fadeIn = keyframes`
@@ -64,10 +65,10 @@ export const SlideContent = styled.div`
   text-align: left;
   color: #fff;
   align-self: flex-start;
-  font-family: 'Raleway', sans-serif;
+  font-family: Oswald, italic;
   font-size: 28px;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-weight: 400;
+  // text-transform: uppercase;
   letter-spacing: 0.9px;
   overflow: hidden;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -75,30 +76,42 @@ export const SlideContent = styled.div`
     color: #ffffff;
     text-align: left;
     color: #ffffff;
-    font-family: "Raleway", Sans-serif;
-    font-size: 50px;
-    font-weight: 300;
-    text-transform: uppercase;
-    line-height: 1em;
+    font-family: "Oswald", italic;
+    font-size: 28px;
+    font-weight: 400;
+    // text-transform: uppercase;
+    line-height: 1.1em;
     padding: 0px 15px 0px 15px;
     margin: 16px 0px 10px 0px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    perspective: 500px;
+    // perspective: 500px;
     letter-spacing: 0px;
  
     margin: 53px 0px 0px 0px;
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
+      font-family: "Oswald", italic;
       font-size: 40px;
+      font-weight: 500;
+      margin: 0px 50px 50px 0px;
     }
 
     @media (max-width: 480px) {
       font-size: 30px;
+      margin: 0px 10px 0px 0px;
+      font-weight: 400;
     }
   }
-  @media (max-width: 500px) {
-      font-size: 40px;
+  @media (min-width: 400px) {
+      top: 55%;
+      font-size: 28px;
       animation: ${({ active }) => (active === 'true' ? fadeIn : fadeOut)} 0.5s ease-out 0.1s both;
+    }
+    @media (min-width: 680px) {
+      top: 40%;   
+    }
+    @media (min-width: 1199px) {
+      top: 50%;   
     }
   
 `;

@@ -20,14 +20,13 @@ const MainSectionSlider = ({ sliders }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
+    // autoplay: true,
+    // autoplaySpeed: 4000,
     afterChange: (index) => {
       setCurrentSlide(index);
-      // Тут ви можете додати логіку для зміни класів SlideContent
     },
   };
 
@@ -47,8 +46,9 @@ const MainSectionSlider = ({ sliders }) => {
               <SlideImage src={slider.image} alt={`Slide ${slider.id}`} />
             </CenteredImageContainer>
             <SlideContent active={currentSlide === index ? 'true' : 'false'}>
-              <h3>{slider.text}</h3>
-              <MainButton title={slider.buttonText}/>
+              <h3>{slider.text[0]}<br/> {slider.text[1]}<br/> {slider.text[2]}</h3> 
+              
+              {/* <MainButton title={slider.buttonText}/> */}
             </SlideContent>
           </SlideContainer>
         ))}

@@ -22,7 +22,7 @@ export const ServicesSection = ({ services }) => {
                 <ServiceContent>
                 <ServiceCard>
                 <ServiceTitle>{service.title}</ServiceTitle>
-                 <ServiceImage className='service-image' src={service.image} alt={`Slide ${service.id}`} />        
+                 {/* <ServiceImage className='service-image' src={service.image} alt={`Slide ${service.id}`} />         */}
                 <ServiceDescription>{service.description}</ServiceDescription>
               </ServiceCard>
             </ServiceContent>

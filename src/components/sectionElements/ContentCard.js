@@ -2,40 +2,50 @@ import { useState } from 'react';
 import {
   Box,
   SlideImage,
-  BackSide,
   BackContent,
   BackButton,
   Card,
-  FrontSide,
   SlideContent,
   CardContent,
+  SlideTextContainer,
+  ShortCard,
+  LongCard,
+  LongSideText,
 } from '../sections/ContentSection/ContentSection.styled';
 
 const ContentCard = ({ infocard }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleCardClick = () => {
-    setIsFlipped(!isFlipped);
+    setIsOpen(!isOpen);
+  };
+
+  const handleCallButtonClick = () => {
+    window.open(`tel:+380969551338`);
   };
 
   return (
-    <Card onClick={handleCardClick}>
+    <Card onClick={handleCardClick} isOpen={isOpen}>
       <Box>
-        <FrontSide className="card__face--front" isFlipped={isFlipped}>
+        <ShortCard className="card__face--front" isOpen={isOpen}>
           <CardContent>
             <SlideImage src={infocard.image} alt={`Slide with repair `} />
-            <SlideContent>{infocard.firstText}</SlideContent>
+            <SlideTextContainer>
+              <SlideContent>{infocard.firstText}</SlideContent>
+            </SlideTextContainer>
+            
           </CardContent>
-        </FrontSide>
-        <BackSide className="card__face--back" isFlipped={isFlipped}>
-          <CardContent>
-            <SlideImage src={infocard.image} alt={`Slide with repair `} />
-            <BackContent>{infocard.secondText}</BackContent>
-            <BackButton>{infocard.buttonText}</BackButton>
-          </CardContent>
-        </BackSide>
+        </ShortCard>
+        {isOpen && (
+          <LongCard className="card__face--back" isOpen={isOpen}>
+            <BackContent>
+              <LongSideText>{infocard.secondText}</LongSideText>
+              <BackButton onClick={handleCallButtonClick}>{infocard.buttonText}</BackButton>            </BackContent>
+          </LongCard>
+        )}
       </Box>
     </Card>
   );
 };
+
 export default ContentCard;
