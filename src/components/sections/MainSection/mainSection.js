@@ -11,7 +11,6 @@ import {
   CenteredImageContainer,
   SlideImage,
 } from "./mainSection.styled";
-import { MainButton } from "components/buttons/button";
 
 const MainSectionSlider = ({ sliders }) => {
   const [currentSlide, setCurrentSlide] = useState(0);

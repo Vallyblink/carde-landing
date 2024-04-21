@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Button, Section, Slide, SliderContainer, SliderContent, SliderTitle, Avatar, NameDiv } from './FeedBackSection.styled';
+import { Button, Section, Slide, SliderContainer, SliderTitle, Avatar, NameDiv } from './FeedBackSection.styled';
 import Slider from "react-slick";
 
 const FeedbackSection = ({ feedback }) => {

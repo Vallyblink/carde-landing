@@ -4,7 +4,6 @@ import {
   Container,
   ServiceItem,
   ServiceContent,
-  ServiceImage,
   ServiceCard,
   ServiceTitle,
   ServiceDescription,
