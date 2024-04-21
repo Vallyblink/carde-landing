@@ -6,13 +6,12 @@ position: relative;
   height: 800px;
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     height: 700px;
   }
 
   @media (max-width: 480px) {
     height: 550px;
-    margin-top:100px;
   }
 `;
 
@@ -22,12 +21,12 @@ export const SlideContainer = styled.div`
   overflow: hidden;
   position: relative;
   background-color: rgba(0, 0, 0, 0.4); 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     height: 700px;
   }
 
   @media (max-width: 480px) {
-    height: 500px;
+    height: 550px;
   }
 `;
 
@@ -98,12 +97,12 @@ export const SlideContent = styled.div`
 
     @media (max-width: 480px) {
       font-size: 30px;
-      margin: 0px 10px 0px 0px;
+      margin: 20px 10px 0px 0px;
       font-weight: 400;
     }
   }
-  @media (min-width: 400px) {
-      top: 55%;
+  @media (min-width: 300px) {
+      top: 60%;
       font-size: 28px;
       animation: ${({ active }) => (active === 'true' ? fadeIn : fadeOut)} 0.5s ease-out 0.1s both;
     }

@@ -34,7 +34,7 @@ export const Container = styled.div`
 export const ContainerTitle = styled.h2`
   text-align: left;
   margin: 10px 10px;
-  margin-left: -80px;
+  margin-left: 0;
   margin-bottom: 30px;
   font-family: 'Oswald', sans-serif;
   font-size: 32px;
