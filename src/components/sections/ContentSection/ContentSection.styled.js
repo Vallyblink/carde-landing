@@ -110,7 +110,7 @@ export const SlideTextContainer = styled.div`
   );
   bottom: 0%;
   left: 0%;
-  width: 350px;
+  width: 100%;
   height: 100px;
   text-align: center;
 `;
