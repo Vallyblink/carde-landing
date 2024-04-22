@@ -30,7 +30,7 @@ const buttons = [
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+ const logo = "https://res.cloudinary.com/teamprojectavatar/image/upload/v1700926597/zmekjelrajtysryq3mbq.png"
 
 
   const toggleMobileMenu = () => {
@@ -44,11 +44,9 @@ const Header = () => {
         <HeaderContainer>
 
           <LogoContainer>
-            <Logo>
-              <svg width="130" height="100">
-                <use href={sprite + '#icon-logo-removebg-preview-1'} />
-              </svg>
-            </Logo>
+          <Logo>
+            <MobileSVG src={logo} alt="logo" />
+          </Logo>
           </LogoContainer>
 
           <Navigation>
@@ -79,9 +77,7 @@ const Header = () => {
         </HeaderContainer>
 
         <MobileHeader>
-              <MobileSVG >
-                <use href={sprite + '#icon-logo-removebg-preview-1'} />
-              </MobileSVG>
+            <MobileSVG src={logo} alt="logo" />
           <MobileSocialIcons>
             <InstagramButton profileLink="https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==" buttonText= "Наш Instagram" />
             <PhoneButton phoneNumber="+380969551338" buttonText="Зателефонувати"/>

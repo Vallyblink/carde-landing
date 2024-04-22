@@ -39,7 +39,11 @@ const ContentCard = ({ infocard }) => {
         {isOpen && (
           <LongCard className="card__face--back" isOpen={isOpen}>
             <BackContent>
-              <LongSideText>{infocard.secondText}</LongSideText>
+              <LongSideText>
+              {infocard.secondText[0]} <br/>
+              {infocard.secondText[1]}<br/>
+              {infocard.secondText[2]}<br/>
+              {infocard.secondText[3]}<br/></LongSideText>
               <BackButton onClick={handleCallButtonClick}>{infocard.buttonText}</BackButton>            </BackContent>
           </LongCard>
         )}

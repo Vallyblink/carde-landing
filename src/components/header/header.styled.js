@@ -42,7 +42,7 @@ export const HeaderContainer = styled.div`
   @media screen and (min-width: 320px) and (max-width: 750px) {
     justify-content: space-between;
     background-color: #000000;
-    height: 60px;
+    height: 50px;
     z-index: 2;
    
   }
@@ -61,8 +61,11 @@ export const Logo = styled.div`
 `;
 
 
-export const MobileSVG = styled.svg`
-  margin: -10px 0 -25px 0;;
+export const MobileSVG = styled.img`
+  width: 160px;
+  height: 140px;
+  z-index: -1;
+  margin-bottom: -20px;
 `;
 export const LogoPicture = styled.div`
   margin-right: 10px; 

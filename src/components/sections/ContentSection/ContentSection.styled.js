@@ -12,7 +12,7 @@ export const Section = styled.section`
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-right: auto;
   margin-left: auto;
@@ -45,11 +45,11 @@ export const ContainerTitle = styled.h2`
 export const Card = styled.div`
   position: relative;
   width: 350px;
-  min-height: ${props => (props.isOpen ? '1100px' : '400px')}; 
+  min-height: ${props => (props.isOpen ? '900px' : '400px')}; 
   padding: 15px 15px;
   margin-bottom: 30px;
   cursor: pointer;
-  border: ${props => (props.isOpen ? '3px outset #a6a6a6;' : 'none')};
+  border: ${props => (props.isOpen ? '1px outset #a6a6a6;' : 'none')};
   border-radius: ${props => (props.isOpen ? '12px' : 'none')};
   box-shadow: ${props => (props.isOpen ? '-16px -16px 21px -9px rgba(122,116,116,0.71);' : 'none')};
 
@@ -68,7 +68,7 @@ export const Box = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
+  text-align: left;
   @media (max-width: 780px) {
     width: 100%;
     height: 400px;
@@ -102,12 +102,7 @@ export const SlideImage = styled.img`
 `;
 export const SlideTextContainer = styled.div`
   position: absolute;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.9)
-  );
+  background: linear-gradient(180deg, rgb(143 9 9 / 89%), rgb(191 0 0), rgb(143 9 9 / 89%));
   bottom: 0%;
   left: 0%;
   width: 100%;
@@ -179,7 +174,7 @@ export const LongSideText = styled.p`
     margin-top: 30px; 
     text-align: left;
     color: rgb(38 36 36);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.5px;
   }
@@ -193,10 +188,10 @@ export const BackButton = styled.div`
   font-size: 28px;
   font-weight: 600;
   width:90%;
-  height:50px;
+  height:60px;
   color: #fff;
   background-color:#cc2525;
-  border-radius: 19px;
+  border-radius: 9px;
   margin-top:20px;
   &:hover {
     color: #fff;
