@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/carde-landing/static/css/main.2eb21e9e.css",
-    "main.js": "/carde-landing/static/js/main.b38a4086.js",
+    "main.js": "/carde-landing/static/js/main.f83c6647.js",
     "static/media/sprite.svg": "/carde-landing/static/media/sprite.4e8c8f103d3bdbaa051109f73fe6dc88.svg",
     "index.html": "/carde-landing/index.html",
     "main.2eb21e9e.css.map": "/carde-landing/static/css/main.2eb21e9e.css.map",
-    "main.b38a4086.js.map": "/carde-landing/static/js/main.b38a4086.js.map"
+    "main.f83c6647.js.map": "/carde-landing/static/js/main.f83c6647.js.map"
   },
   "entrypoints": [
     "static/css/main.2eb21e9e.css",
-    "static/js/main.b38a4086.js"
+    "static/js/main.f83c6647.js"
   ]
 }
