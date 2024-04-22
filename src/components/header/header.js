@@ -18,7 +18,6 @@ import {
   BackDrop
 } from './header.styled';
 import { HeaderButton, PhoneButton, InstagramButton } from 'components/buttons/button';
-import sprite from '../../sprite.svg';
 
 const buttons = [
   { title: 'Головна', link: 'main' },
