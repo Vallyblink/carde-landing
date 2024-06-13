@@ -56,7 +56,7 @@ const Header = () => {
 
           <SocialIcons>
               <InstagramIcon onClick={() => window.open("https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==")}/>
-            <PhoneButton phoneNumber="+380969551338" />
+            <PhoneButton phoneNumber="+380972586688" />
           </SocialIcons>
           
           <MenuIcon onClick={toggleMobileMenu} sx={{ '@media screen and (min-width: 780px)': { display: 'none' }, }}></MenuIcon>
@@ -79,7 +79,7 @@ const Header = () => {
             <MobileSVG src={logo} alt="logo" />
           <MobileSocialIcons>
             <InstagramButton profileLink="https://instagram.com/cardedetailing?igshid=OGQ5ZDc2ODk2ZA==" buttonText= "Наш Instagram" />
-            <PhoneButton phoneNumber="+380969551338" buttonText="Зателефонувати"/>
+            <PhoneButton phoneNumber="+380972586688" buttonText="Зателефонувати"/>
           </MobileSocialIcons>
       </MobileHeader>
       </HeaderSection>
