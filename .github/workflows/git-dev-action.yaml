@@ -32,7 +32,7 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           user: ${{ secrets.REMOTE_USER }}
           pass: ${{ secrets.REMOTE_PASS}}
-          scp: build/* => carde.com.ua/new/
+          scp: build/* => carde.com.ua/
 
 
 
