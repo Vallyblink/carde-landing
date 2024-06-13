@@ -97,7 +97,7 @@ export const HeaderButton = ({ title, link }) => {
 
 export const PhoneButton = ({ phoneNumber, buttonText }) => {
   return (
-    <Link to={`tel:${phoneNumber}`} style={{ textDecoration: 'none' }}>
+    <Link to={`tel: +380972586688`} style={{ textDecoration: 'none' }}>
       <Button
         type="button"
         disableElevation
