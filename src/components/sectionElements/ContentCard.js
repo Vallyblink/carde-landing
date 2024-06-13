@@ -21,7 +21,7 @@ const ContentCard = ({ infocard }) => {
   };
 
   const handleCallButtonClick = () => {
-    window.open(`tel:+380969551338`);
+    window.open(`tel:+380972586688`);
   };
 
   return (
