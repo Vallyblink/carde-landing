@@ -1,0 +1,35 @@
+ name: Mira client side deploy
+ run-name: ${{ github.actor }} Pipeline PROCESSING 🚀
+ on:
+   push:
+     branches:
+       - main
+
+ jobs:
+   init:
+     runs-on: ubuntu-latest
+     strategy:
+       matrix:
+         node-version: [ 16.x ]
+     steps:
+       - uses: actions/checkout@v4
+       - name: Starting node.js ${{ matrix.node-version }}
+         uses: actions/setup-node@v4
+         with:
+           node-version: ${{ matrix.node-version }}
+       - name: Install modules
+         run: npm install
+       - name: Build
+         run: |
+           CI=false npm run build
+       - name: Remove .map files
+         run: rm -rf build/static/js/*.map
+       - name: scp ssh pipelines
+         uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+         env:
+           LASTSSH: "Successfully deployed to miraplay host!"
+         with:
+           host: ${{ secrets.REMOTE_HOST }}
+           user: ${{ secrets.REMOTE_USER }}
+           pass: ${{ secrets.REMOTE_PASS}}
+           scp: build/* => carde.com.ua/www/
