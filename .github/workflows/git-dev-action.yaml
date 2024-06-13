@@ -1,5 +1,5 @@
 name: Mira client side deploy
-run-name: ${{ github.actor }} DEV Pipeline PROCESSING to new/miraplay.cloud 🚀
+run-name: ${{ github.actor }} DEV Pipeline PROCESSING 🚀
 on:
   push:
     branches:
@@ -27,7 +27,7 @@ jobs:
       - name: scp ssh pipelines
         uses: cross-the-world/ssh-scp-ssh-pipelines@latest
         env:
-          LASTSSH: "Successfully deployed to miraplay host!"
+          LASTSSH: "Successfully deployed to host!"
         with:
           host: ${{ secrets.REMOTE_HOST }}
           user: ${{ secrets.REMOTE_USER }}
