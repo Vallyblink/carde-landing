@@ -22,8 +22,8 @@
        - name: Build
          run: |
            CI=false npm run build
-       - name: Remove .map files
-         run: rm -rf build/static/js/*.map
+      #  - name: Remove .map files
+      #    run: rm -rf build/static/js/*.map
        - name: scp ssh pipelines
          uses: cross-the-world/ssh-scp-ssh-pipelines@latest
          env:
