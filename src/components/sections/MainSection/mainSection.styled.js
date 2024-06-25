@@ -24,7 +24,7 @@ export const SlideContainer = styled.div`
   height: 800px;
   overflow: hidden;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.7); /* Напівпрозорий чорний фон */
+  background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
 
   @media (min-width: 768px) {
     height: 700px;
@@ -165,7 +165,7 @@ export const CenteredImageContainer = styled.div`
   display: flex;
   justify-content: center;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Напівпрозорий чорний фон */
+  background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
 `;
 
 export const CustomButton = styled.button`
