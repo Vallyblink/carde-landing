@@ -1,7 +1,7 @@
-import styled, { keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const SliderContainer = styled.section`
-position: relative;  
+  position: relative;
   width: 100%;
   height: 800px;
   overflow: hidden;
@@ -12,6 +12,10 @@ position: relative;
 
   @media (max-width: 480px) {
     height: 550px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 900px;
   }
 `;
 
@@ -20,7 +24,8 @@ export const SlideContainer = styled.div`
   height: 800px;
   overflow: hidden;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.4); 
+  background-color: rgba(0, 0, 0, 0.7); /* Напівпрозорий чорний фон */
+
   @media (min-width: 768px) {
     height: 700px;
   }
@@ -28,20 +33,23 @@ export const SlideContainer = styled.div`
   @media (max-width: 480px) {
     height: 550px;
   }
+
+  @media (min-width: 1200px) {
+    height: 900px;
+  }
 `;
 
 export const SlideImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index:-1;
-  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1;
 `;
 
 const fadeIn = keyframes`
   from {
     transform: translateY(120%);
-    visability: hidden;
+    visibility: hidden;
   }
   to {
     transform: translateY(-50%);
@@ -64,32 +72,25 @@ export const SlideContent = styled.div`
   text-align: left;
   color: #fff;
   align-self: flex-start;
-  font-family: Oswald, italic;
+  font-family: 'Oswald', sans-serif;
   font-size: 28px;
   font-weight: 400;
-  // text-transform: uppercase;
   letter-spacing: 0.9px;
   overflow: hidden;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
   h3 {
     color: #ffffff;
     text-align: left;
-    color: #ffffff;
-    font-family: "Oswald", italic;
+    font-family: 'Oswald', sans-serif;
     font-size: 28px;
     font-weight: 400;
-    // text-transform: uppercase;
     line-height: 1.1em;
-    padding: 0px 15px 0px 15px;
-    margin: 16px 0px 10px 0px;
+    padding: 0px 15px;
+    margin: 16px 0px 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    // perspective: 500px;
-    letter-spacing: 0px;
- 
-    margin: 53px 0px 0px 0px;
 
     @media (min-width: 768px) {
-      font-family: "Oswald", italic;
       font-size: 40px;
       font-weight: 500;
       margin: 0px 50px 50px 0px;
@@ -100,26 +101,37 @@ export const SlideContent = styled.div`
       margin: 20px 10px 0px 0px;
       font-weight: 400;
     }
+
+    @media (min-width: 1200px) {
+      font-size: 50px;
+    }
   }
+
   @media (min-width: 300px) {
-      top: 60%;
-      font-size: 28px;
-      animation: ${({ active }) => (active === 'true' ? fadeIn : fadeOut)} 0.5s ease-out 0.1s both;
-    }
-    @media (min-width: 680px) {
-      top: 40%;   
-    }
-    @media (min-width: 1199px) {
-      top: 50%;   
-    }
-  
+    top: 60%;
+    font-size: 28px;
+    animation: ${({ active }) => (active === 'true' ? fadeIn : fadeOut)} 0.5s ease-out 0.1s both;
+  }
+
+  @media (min-width: 680px) {
+    top: 40%;
+  }
+
+  @media (min-width: 1199px) {
+    top: 50%;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 36px;
+  }
 `;
+
 export const SliderNav = styled.div`
   position: absolute;
   top: 50%;
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Add this to space the buttons on both sides */
+  justify-content: space-between;
   align-items: center;
   transform: translateY(-50%);
 
@@ -134,7 +146,6 @@ export const SliderNav = styled.div`
       color: #cc2525;
     }
   }
-
 `;
 
 export const NavButton = styled.button`
@@ -146,7 +157,7 @@ export const NavButton = styled.button`
   transition: color 0.3s;
 
   &:hover {
-    color: #00f;
+    color: #cc2525;
   }
 `;
 
@@ -154,23 +165,28 @@ export const CenteredImageContainer = styled.div`
   display: flex;
   justify-content: center;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.7); /* Напівпрозорий чорний фон */
 `;
 
 export const CustomButton = styled.button`
   width: 180px;
   background-color: transparent;
-  border: none;
+  border: 2px solid #fff; /* Білий контур */
   color: #fff;
   font-size: 18px;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s, border-color 0.3s;
 
   &:hover {
-    color: #00f;
+    color: #cc2525;
+    border-color: #cc2525;
   }
 
   @media (max-width: 780px) {
     width: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 200px;
   }
 `;

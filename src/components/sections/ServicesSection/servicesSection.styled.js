@@ -4,7 +4,8 @@ export const Section = styled.section`
   display: flex;
   padding: 20px;
   margin-top: 40px;
-  font-family: "Raleway",Sans-serif;
+  font-family: "Raleway", Sans-serif;
+  background-color: #000;
 
   @media (min-width: 1200px) {
     justify-content: center;
@@ -56,7 +57,6 @@ export const ServiceImage = styled.img`
     width: 100%;
     height: auto;
     object-fit: contain;
-   
   }
 `;
 
@@ -67,6 +67,8 @@ export const ServiceCard = styled.div`
   position: relative;
   margin-right: 10px;
   margin-left: 10px;
+  background-color: #333;
+  color: #fff;
 
   @media (max-width: 780px) {
     width: calc(100% - 40px);
@@ -93,17 +95,17 @@ export const ServiceCard = styled.div`
     width: 1000px;
     flex-wrap: wrap;
   }
-
 `;
 
 export const ServiceTitle = styled.h2`
+  color: #ffffff;
   @media (max-width: 780px) {
     text-align: left;
     margin-right: 20px;
     font-weight: 500;
     font-style: normal;
-    font-size: calc(24px + (36 - 24) * ((100vw - 100px)/ (1800 - 100)));
-    line-height: calc(30px + (48 - 30) * ((100vw - 100px)/ (1800 - 100)));
+    font-size: calc(24px + (36 - 24) * ((100vw - 100px) / (1800 - 100)));
+    line-height: calc(30px + (48 - 30) * ((100vw - 100px) / (1800 - 100)));
   }
   @media (min-width: 780px) {
     text-align: left;
@@ -112,10 +114,11 @@ export const ServiceTitle = styled.h2`
 `;
 
 export const ServiceDescription = styled.p`
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
   @media (min-width: 780px) {
     width: 300px;
     text-align: right;
@@ -131,9 +134,8 @@ export const ServiceLine = styled.div`
 export const ContainerTitle = styled.h2`
   text-align: left;
   margin: 10px 10px;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 36px;
-    
+  font-weight: 800;
+  font-style: normal;
+  font-size: 36px;
+  color: #ffffff;
 `;
-

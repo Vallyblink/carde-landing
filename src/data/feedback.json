@@ -1,21 +1,45 @@
 [
-    {
-      "name": "Марія Петренко",
-      "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1692540914/samples/outdoor-woman.jpg",
-      "comment": "Дуже задоволена результатом шліфування. Авто виглядає ідеально, ніби щойно з салону. Професіоналізм персоналу вражає! Рекомендую!",
-      "key": "1"
-    },
-    {
-      "name": "Іван Ковальчук",
-      "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1692540915/samples/man-on-a-street.jpg",
-      "comment": "Хочу висловити подяку за чудову хімчистку моєї машини. Результат перевищив очікування. Дуже задоволений якістю роботи!",
-      "key": "2"
-    },
-    {
-      "name": "Олександр Іванов",
-      "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1692540914/samples/look-up.jpg",
-      "comment": "Велике спасибі за полірування автомобіля. Шикарний результат, який бачать всі навколо. Тепер моє авто справді виглядає як нове!",
-      "key": "3"
-    }
+  {
+    "name": "Марія Петренко",
+    "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1692540914/samples/outdoor-woman.jpg",
+    "comment": "Дуже задоволена результатом шліфування. Авто виглядає ідеально, ніби щойно з салону. Професіоналізм персоналу вражає! Рекомендую!",
+    "date": "2024-06-25",
+    "key": "1"
+},
+{
+    "name": "Іван Ковальчук",
+    "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1692540915/samples/man-on-a-street.jpg",
+    "comment": "Хочу висловити подяку за чудову хімчистку моєї машини. Результат перевищив очікування. Дуже задоволений якістю роботи!",
+    "date": "2024-06-24",
+    "key": "2"
+},
+{
+    "name": "Олександр Іванов",
+    "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1692540914/samples/look-up.jpg",
+    "comment": "Велике спасибі за полірування автомобіля. Шикарний результат, який бачать всі навколо. Тепер моє авто справді виглядає як нове!",
+    "date": "2024-06-23",
+    "key": "3"
+},
+{
+    "name": "Андрій Сидоров",
+    "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1693998437/teamproject/avatar/dfykcjrenweco8pobo3w.jpg",
+    "comment": "Вражений якістю послуг. Полірування моєї машини було виконано на вищому рівні. Рекомендую цей сервіс!",
+    "date": "2024-06-22",
+    "key": "4"
+},
+{
+    "name": "Наталія Петрова",
+    "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1693998437/teamproject/avatar/dfykcjrenweco8pobo3w.jpg",
+    "comment": "Чудовий сервіс! Швидко і якісно відремонтували моє авто після ДТП. Дуже задоволена результатом!",
+    "date": "2024-06-21",
+    "key": "5"
+},
+{
+    "name": "Олег Шевченко",
+    "avatar": "https://res.cloudinary.com/teamprojectavatar/image/upload/v1701041370/Cats/yto8ap4k2g9gsxklciec.jpg",
+    "comment": "Дуже задоволений роботою сервісу. Вони докладають всіх зусиль, щоб клієнти були задоволені результатом. Рекомендую!",
+    "date": "2024-06-20",
+    "key": "6"
+}
   ]
   

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Button, Section, Slide, SliderContainer, SliderTitle, Avatar, NameDiv } from './FeedBackSection.styled';
+import { Button,CommentText, Section, Slide, SliderContainer, SliderTitle, Avatar, NameDiv } from './FeedBackSection.styled';
 import Slider from "react-slick";
 
 const FeedbackSection = ({ feedback }) => {
@@ -33,7 +33,7 @@ const FeedbackSection = ({ feedback }) => {
               <Avatar src={feedback.avatar} alt="Avatar" />
               <h3>{feedback.name}</h3>
               </NameDiv>  
-              <p>{feedback.comment}</p>
+              <CommentText>{feedback.comment}</CommentText>
             </Slide>
           ))}
         </Slider>
