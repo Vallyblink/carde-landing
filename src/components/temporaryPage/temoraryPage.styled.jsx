@@ -9,7 +9,7 @@ export const Section = styled.section`
 `
 export const Container = styled.div`
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 250px;
@@ -24,7 +24,6 @@ export const Container = styled.div`
   }
   @media (min-width: 1200px) {
    width: 800px;
-   top: 30%;
   }
 
 `
