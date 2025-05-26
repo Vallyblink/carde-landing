@@ -10,15 +10,17 @@ import data from '../data/mainSlider.json';
 import infodata from '../data/infoSlider.json';
 import servicedata from '../data/servicesSection.json';
 import feedback from '../data/feedback.json';
+import TemporaryPage from './temporaryPage/temporaryPage';
 
 const Home = () => {
   return (
     <>
-      <MainSectionSlider sliders={data} />
+      {/* <MainSectionSlider sliders={data} />
       <ContentSection infocards={infodata} />
       <ServicesSection services={servicedata} />
       <FeedbackSection feedback={feedback} />
-      <LocationSection />
+      <LocationSection /> */}
+      <TemporaryPage/>
     </>
   );
 };
@@ -26,14 +28,14 @@ const Home = () => {
  export const App = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />}>
-        <Route path="main" element={<MainSectionSlider sliders={data} />} />
+        {/* <Route path="main" element={<MainSectionSlider sliders={data} />} />
         <Route path="content" element={<ContentSection infocards={infodata} />} />
         <Route path="services" element={<ServicesSection services={servicedata} />} />
         <Route path="feedback" element={<FeedbackSection feedback={feedback} />} />
-        <Route path="location" element={<LocationSection />} />
+        <Route path="location" element={<LocationSection />} /> */}
         </Route>
       </Routes>
     </div>
